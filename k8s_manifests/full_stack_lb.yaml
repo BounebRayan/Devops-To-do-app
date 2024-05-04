@@ -10,14 +10,14 @@ spec:
     - host: pfa 
       http:
         paths:
-          - path: /
+          - path: /backend
             pathType: Prefix
             backend:
               service:
                 name: backend
                 port:
                   number: 8080
-          - path: /frontend
+          - path: /
             pathType: Prefix
             backend:
               service:
