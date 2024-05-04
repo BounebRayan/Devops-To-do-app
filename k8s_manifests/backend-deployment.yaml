@@ -28,16 +28,16 @@ spec:
         env:
           - name: MONGO_CONN_STR
             value: mongodb://mongodb-svc:27017/todo?directConnection=true
-          - name: MONGO_USERNAME
-            valueFrom:
-              secretKeyRef:
-                name: mongo-sec
-                key: username
-          - name: MONGO_PASSWORD
-            valueFrom:
-              secretKeyRef:
-                name: mongo-sec
-                key: password
+      #    - name: MONGO_USERNAME
+      #     valueFrom:
+      #        secretKeyRef:
+      #          name: mongo-sec
+      #          key: username
+      #    - name: MONGO_PASSWORD
+      #      valueFrom:
+      #        secretKeyRef:
+      #          name: mongo-sec
+      #          key: password
         ports:
         - containerPort: 8080
         livenessProbe:
